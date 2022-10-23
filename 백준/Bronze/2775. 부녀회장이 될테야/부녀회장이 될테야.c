@@ -38,22 +38,15 @@ int main() {
 
 		for (int i = 1; i <= k; i++)
 		{
-
-			while (ii <= j && j < n)
+			for (int j = 0; j < n; j++)
 			{
-				arr[i][j] = arr[i][j] + arr[i - 1][ii];
-				ii++;
-				answer = arr[i][j];
-
-				if (ii > j)
+				for (int y = 0; y <=j; y++)
 				{
-					j++;
-					ii = 0;
+					arr[i][j] = arr[i][j] + arr[i-1][y];
 				}
-
+				answer = arr[i][j];
 			}
-			j = 0;
-			ii = 0;
+			
 		}
 		printf("%d\n", answer);
 		cnt++;
